@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --SoftMagenta: hsl(300, 69%, 71%);
+}
+.heading{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--Violet);
+    background-image: url("./images/bg-desktop.svg");
+}
+.logo{
+    margin: 3rem;
+}
+main{
+    display: flex;
+}
+.illustration{
+    width: 100%;
+}
+.left{
+    display: flex;
+    padding: 2rem;
+}
+.right{
+    padding: 2rem;
+    display: flex;
+    color: white;
+    width: 40%;
+    flex-direction: column;
+}
+
+.btn{
+    background-color: white;
+    color: var(--Violet);
+    width: 50%;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover{
+    background-color: var(--SoftMagenta);
+    color: white;
+}
+
+.icons{
+    display: flex;
+    font-size: 1.5rem;
+    color: white;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-right: 2.5rem;
+}
+ion-icon{
+    cursor: pointer;
+}
+ion-icon:hover{
+    color: var(--SoftMagenta);
+}
+
+@media screen and (max-width: 375px){
+    .logo{
+        margin: 0.5rem;
+        width: 50%;
+    }
+    .illustration{
+        width:100%;
+    }
+    .heading{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 750px){
+    body{
+        background-image: url("./images/bg-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    main{
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem 0;
+        align-items: center;
+    }
+    .illustration{
+        width: 70%;
+    }
+    .right{
+        width: 80%;
+        align-items: center;
+        text-align: center;
+    }
+    .left, .right , .icons{
+        justify-content: center;
+        padding: 0;
+    }
+}
